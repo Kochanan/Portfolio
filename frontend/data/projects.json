@@ -1,0 +1,68 @@
+{
+  "projects": [
+    {
+      "id": "proj-001",
+      "title": "Science Fair Research Project",
+      "category": "Research",
+      "year": "2025",
+      "role": "Lead Researcher",
+      "summary": "Investigated a real-world problem and presented findings at the school science fair. Replace with your actual project story, method, and result.",
+      "highlights": [
+        "Defined a clear research question",
+        "Collected and analyzed data",
+        "Presented to judges and peers"
+      ],
+      "skills": ["Research", "Data Analysis", "Presentation"],
+      "link": "",
+      "image": ""
+    },
+    {
+      "id": "proj-002",
+      "title": "Club Leadership Initiative",
+      "category": "Leadership",
+      "year": "2024–2025",
+      "role": "Club President / Organizer",
+      "summary": "Organized events, mentored juniors, and grew participation. Swap this for a club, student council, or community project you led.",
+      "highlights": [
+        "Planned and ran school events",
+        "Coordinated a team of members",
+        "Improved turnout and engagement"
+      ],
+      "skills": ["Leadership", "Teamwork", "Event Planning"],
+      "link": "",
+      "image": ""
+    },
+    {
+      "id": "proj-003",
+      "title": "Personal Coding / Design Build",
+      "category": "Creative / Tech",
+      "year": "2025",
+      "role": "Creator",
+      "summary": "A personal project that shows how you think and build — website, app, short film, product design, or prototype. Describe what you made and why.",
+      "highlights": [
+        "Shipped a working prototype",
+        "Solved a problem you care about",
+        "Documented the process"
+      ],
+      "skills": ["Problem Solving", "Creativity", "Self-learning"],
+      "link": "",
+      "image": ""
+    },
+    {
+      "id": "proj-004",
+      "title": "Volunteer / Community Service",
+      "category": "Service",
+      "year": "2024",
+      "role": "Volunteer",
+      "summary": "Hours and impact from volunteering or community work. Update with where you served and what changed because of your effort.",
+      "highlights": [
+        "Consistent weekly commitment",
+        "Supported people in need",
+        "Learned empathy and responsibility"
+      ],
+      "skills": ["Service", "Communication", "Reliability"],
+      "link": "",
+      "image": ""
+    }
+  ]
+}

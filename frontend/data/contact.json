@@ -1,0 +1,21 @@
+{
+  "name": "Your Full Name",
+  "telephoneNumber": "+66 8X XXX XXXX",
+  "email": "you@example.com",
+  "dateOfBirth": "2008-05-15",
+  "school": "Your School Name",
+  "grade": "M.6",
+  "headline": "Building things that matter — ready for university.",
+  "bio": "M.6 student preparing university applications. Edit this bio to describe your interests, strengths, and the programs you are aiming for.",
+  "location": "Bangkok, Thailand",
+  "targetPrograms": [
+    "Computer Science",
+    "Design",
+    "Engineering"
+  ],
+  "socials": {
+    "github": "",
+    "linkedin": "",
+    "portfolio": ""
+  }
+}
