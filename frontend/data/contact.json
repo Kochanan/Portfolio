@@ -1,17 +1,17 @@
 {
-  "name": "Your Full Name",
-  "telephoneNumber": "+66 8X XXX XXXX",
-  "email": "you@example.com",
+  "name": "KOCHANAN THAIPHAKDEE",
+  "telephoneNumber": "+66 898089966",
+  "email": "kochanan.19933@gmail.com",
   "dateOfBirth": "2008-05-15",
-  "school": "Your School Name",
+  "school": "Assumption College Rayong",
   "grade": "M.6",
-  "headline": "Building things that matter — ready for university.",
-  "bio": "M.6 student preparing university applications. Edit this bio to describe your interests, strengths, and the programs you are aiming for.",
-  "location": "Bangkok, Thailand",
+  "headline": "Designer who builds apps, games, and interfaces that people actually want to use.",
+  "bio": "M.6 student at Assumption College Rayong. I design digital products — from English learning games to polished app interfaces — and I'm aiming for university programs where design, tech, and creativity meet.",
+  "location": "Rayong, Thailand",
   "targetPrograms": [
-    "Computer Science",
-    "Design",
-    "Engineering"
+    "Digital Design",
+    "Interactive Media",
+    "Computer Science"
   ],
   "socials": {
     "github": "",
