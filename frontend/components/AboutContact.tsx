@@ -13,7 +13,7 @@ export function AboutContact({ contact, age }: AboutContactProps) {
   const { locale, t } = useLanguage();
 
   const facts = [
-    { label: t.about.school, value: contact.school },
+    { label: t.about.school, value: t.content.school },
     { label: t.about.grade, value: contact.grade },
     { label: t.about.location, value: t.content.location },
     {

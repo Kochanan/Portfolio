@@ -56,6 +56,7 @@ type Dictionary = {
     headline: string;
     bio: string;
     location: string;
+    school: string;
     targetPrograms: string[];
   };
   projectCopy: Record<
@@ -116,6 +117,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Designer who builds apps, games, and interfaces that people actually want to use.",
       bio: "M.6 student at Assumption College Rayong. I design digital products — from English learning games to polished app interfaces — and I'm aiming for university programs where design, tech, and creativity meet.",
       location: "Rayong, Thailand",
+      school: "Assumption College Rayong",
       targetPrograms: ["Digital Design", "Interactive Media", "Computer Science"],
     },
     projectCopy: {
@@ -217,6 +219,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "นักออกแบบที่สร้างแอป เกม และอินเทอร์เฟซที่คนอยากใช้งานจริง",
       bio: "นักเรียน ม.6 โรงเรียนอัสสัมชัญระยอง ออกแบบผลิตภัณฑ์ดิจิทัล — จากเกมเรียนภาษาอังกฤษไปจนถึงอินเทอร์เฟซแอปที่ขัดเกลา — และมุ่งสู่หลักสูตรมหาวิทยาลัยที่ออกแบบ เทคโนโลยี และความคิดสร้างสรรค์มาบรรจบกัน",
       location: "ระยอง ประเทศไทย",
+      school: "โรงเรียนอัสสัมชัญระยอง",
       targetPrograms: ["ดิจิทัลดีไซน์", "มีเดียเชิงโต้ตอบ", "วิทยาการคอมพิวเตอร์"],
     },
     projectCopy: {
