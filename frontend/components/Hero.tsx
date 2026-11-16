@@ -1,3 +1,6 @@
+"use client";
+
+import { useLanguage } from "@/lib/i18n";
 import type { Contact } from "@/lib/types";
 
 type HeroProps = {
@@ -6,6 +9,8 @@ type HeroProps = {
 };
 
 export function Hero({ contact, age }: HeroProps) {
+  const { t } = useLanguage();
+
   return (
     <section
       id="top"
@@ -20,7 +25,7 @@ export function Hero({ contact, age }: HeroProps) {
 
       <div className="relative z-10 mx-auto w-full max-w-6xl">
         <p className="animate-rise mb-5 text-sm tracking-[0.22em] text-[var(--accent-bright)] uppercase">
-          {contact.grade} · University Portfolio · Age {age}
+          {contact.grade} · {t.hero.universityPortfolio} · {t.hero.age} {age}
         </p>
 
         <h1 className="animate-rise-delay-1 max-w-4xl font-[family-name:var(--font-syne)] text-[clamp(2.75rem,8vw,6.5rem)] leading-[0.95] font-bold tracking-tight text-white">
@@ -28,7 +33,7 @@ export function Hero({ contact, age }: HeroProps) {
         </h1>
 
         <p className="animate-rise-delay-2 mt-6 max-w-xl text-lg leading-relaxed text-[var(--text-muted)] md:text-xl">
-          {contact.headline}
+          {t.content.headline}
         </p>
 
         <div className="animate-rise-delay-3 mt-10 flex flex-wrap items-center gap-4">
@@ -36,13 +41,13 @@ export function Hero({ contact, age }: HeroProps) {
             href="#work"
             className="inline-flex items-center rounded-md bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[var(--accent-bright)] hover:text-[#061018]"
           >
-            View work
+            {t.hero.viewWork}
           </a>
           <a
             href={`mailto:${contact.email}`}
             className="inline-flex items-center rounded-md border border-[var(--line)] px-5 py-3 text-sm font-medium text-[var(--text)] transition hover:border-[var(--accent-bright)] hover:text-white"
           >
-            Email me
+            {t.hero.emailMe}
           </a>
         </div>
       </div>

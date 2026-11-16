@@ -1,4 +1,7 @@
+"use client";
+
 import { formatDateOfBirth } from "@/lib/age";
+import { useLanguage } from "@/lib/i18n";
 import type { Contact } from "@/lib/types";
 
 type AboutContactProps = {
@@ -7,12 +10,17 @@ type AboutContactProps = {
 };
 
 export function AboutContact({ contact, age }: AboutContactProps) {
+  const { locale, t } = useLanguage();
+
   const facts = [
-    { label: "School", value: contact.school },
-    { label: "Grade", value: contact.grade },
-    { label: "Location", value: contact.location },
-    { label: "Date of Birth", value: formatDateOfBirth(contact.dateOfBirth) },
-    { label: "Age", value: `${age} years` },
+    { label: t.about.school, value: contact.school },
+    { label: t.about.grade, value: contact.grade },
+    { label: t.about.location, value: t.content.location },
+    {
+      label: t.about.dateOfBirth,
+      value: formatDateOfBirth(contact.dateOfBirth, locale),
+    },
+    { label: t.about.age, value: `${age} ${t.about.years}` },
   ];
 
   return (
@@ -21,22 +29,22 @@ export function AboutContact({ contact, age }: AboutContactProps) {
         <div className="mx-auto grid max-w-6xl gap-14 md:grid-cols-[1.1fr_0.9fr] md:gap-20">
           <div>
             <p className="mb-3 text-sm tracking-[0.2em] text-[var(--accent-bright)] uppercase">
-              About
+              {t.about.eyebrow}
             </p>
             <h2 className="font-[family-name:var(--font-syne)] text-3xl font-bold tracking-tight text-white md:text-5xl">
-              Who I am
+              {t.about.title}
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">
-              {contact.bio}
+              {t.content.bio}
             </p>
 
-            {contact.targetPrograms.length > 0 && (
+            {t.content.targetPrograms.length > 0 && (
               <div className="mt-8">
                 <p className="mb-3 text-xs tracking-[0.18em] text-[var(--text-muted)] uppercase">
-                  Target programs
+                  {t.about.targetPrograms}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {contact.targetPrograms.map((program) => (
+                  {t.content.targetPrograms.map((program) => (
                     <span
                       key={program}
                       className="border border-[var(--accent)]/35 bg-[var(--accent)]/10 px-3 py-1.5 text-sm text-[var(--accent-bright)]"
@@ -69,32 +77,28 @@ export function AboutContact({ contact, age }: AboutContactProps) {
             <div className="orb -right-16 -top-16 h-56 w-56 bg-[var(--accent)]/25" />
             <div className="relative z-10 max-w-2xl">
               <p className="mb-3 text-sm tracking-[0.2em] text-[var(--accent-bright)] uppercase">
-                Contact
+                {t.contact.eyebrow}
               </p>
               <h2 className="font-[family-name:var(--font-syne)] text-3xl font-bold text-white md:text-4xl">
-                Let&apos;s talk admissions
+                {t.contact.title}
               </h2>
-              <p className="mt-4 text-[var(--text-muted)]">
-                Update these details in{" "}
-                <code className="text-[var(--accent-bright)]">data/contact.json</code>. Age
-                updates automatically from your date of birth.
-              </p>
+              <p className="mt-4 text-[var(--text-muted)]">{t.contact.hint}</p>
 
               <div className="mt-10 grid gap-6 sm:grid-cols-2">
-                <a
-                  href={`mailto:${contact.email}`}
-                  className="group block"
-                >
+                <a href={`mailto:${contact.email}`} className="group block">
                   <p className="text-xs tracking-[0.16em] text-[var(--text-muted)] uppercase">
-                    Email
+                    {t.contact.email}
                   </p>
                   <p className="mt-1 text-lg text-white transition group-hover:text-[var(--accent-bright)]">
                     {contact.email}
                   </p>
                 </a>
-                <a href={`tel:${contact.telephoneNumber.replace(/\s/g, "")}`} className="group block">
+                <a
+                  href={`tel:${contact.telephoneNumber.replace(/\s/g, "")}`}
+                  className="group block"
+                >
                   <p className="text-xs tracking-[0.16em] text-[var(--text-muted)] uppercase">
-                    Telephone
+                    {t.contact.telephone}
                   </p>
                   <p className="mt-1 text-lg text-white transition group-hover:text-[var(--accent-bright)]">
                     {contact.telephoneNumber}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Manrope, Syne } from "next/font/google";
+import { Manrope, Noto_Sans_Thai, Syne } from "next/font/google";
+import { Providers } from "@/components/Providers";
 import "./globals.css";
 
 const syne = Syne({
@@ -14,6 +15,12 @@ const manrope = Manrope({
   weight: ["400", "500", "600", "700"],
 });
 
+const notoThai = Noto_Sans_Thai({
+  variable: "--font-thai",
+  subsets: ["thai", "latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata: Metadata = {
   title: "M.6 University Portfolio",
   description:
@@ -24,9 +31,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${syne.variable} ${manrope.variable} h-full antialiased`}
+      className={`${syne.variable} ${manrope.variable} ${notoThai.variable} h-full antialiased`}
     >
-      <body className="bg-atmosphere min-h-full flex flex-col">{children}</body>
+      <body className="bg-atmosphere min-h-full flex flex-col">
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

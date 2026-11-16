@@ -4,6 +4,7 @@ import { AboutContact } from "@/components/AboutContact";
 import { Hero } from "@/components/Hero";
 import { Nav } from "@/components/Nav";
 import { Projects } from "@/components/Projects";
+import { SiteFooter } from "@/components/SiteFooter";
 import contact from "@/data/contact.json";
 import projectsData from "@/data/projects.json";
 import { calculateAge } from "@/lib/age";
@@ -37,14 +38,7 @@ async function Portfolio() {
         <Projects projects={projects} />
         <AboutContact contact={contactData} age={age} />
       </main>
-      <footer className="border-t border-[var(--line)] px-6 py-8 md:px-8">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 text-sm text-[var(--text-muted)] sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {now.getFullYear()} {contactData.name}
-          </p>
-          <p>M.6 University Portfolio Template</p>
-        </div>
-      </footer>
+      <SiteFooter name={contactData.name} year={now.getFullYear()} />
     </>
   );
 }

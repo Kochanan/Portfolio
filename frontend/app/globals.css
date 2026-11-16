@@ -34,7 +34,7 @@ body {
   min-height: 100%;
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-manrope), system-ui, sans-serif;
+  font-family: var(--font-manrope), var(--font-thai), system-ui, sans-serif;
 }
 
 ::selection {

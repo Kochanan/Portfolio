@@ -1,3 +1,6 @@
+"use client";
+
+import { useLanguage } from "@/lib/i18n";
 import type { Contact } from "@/lib/types";
 
 type NavProps = {
@@ -5,6 +8,7 @@ type NavProps = {
 };
 
 export function Nav({ contact }: NavProps) {
+  const { locale, setLocale, t } = useLanguage();
   const firstName = contact.name.split(" ")[0] ?? contact.name;
 
   return (
@@ -16,19 +20,50 @@ export function Nav({ contact }: NavProps) {
         >
           {firstName}
         </a>
-        <nav className="flex items-center gap-6 text-sm text-[var(--text-muted)]">
+        <nav className="flex items-center gap-4 text-sm text-[var(--text-muted)] sm:gap-6">
           <a href="#work" className="transition-colors hover:text-white">
-            Work
+            {t.nav.work}
           </a>
           <a href="#about" className="transition-colors hover:text-white">
-            About
+            {t.nav.about}
           </a>
           <a
             href="#contact"
             className="rounded-md border border-[var(--line)] bg-white/5 px-3 py-1.5 text-white transition-colors hover:border-[var(--accent)] hover:bg-[var(--accent)]/15"
           >
-            Contact
+            {t.nav.contact}
           </a>
+
+          <div
+            className="flex items-center rounded-md border border-[var(--line)] bg-white/5 p-0.5"
+            role="group"
+            aria-label="Language"
+          >
+            <button
+              type="button"
+              onClick={() => setLocale("en")}
+              aria-pressed={locale === "en"}
+              className={`rounded px-2.5 py-1 text-xs font-semibold tracking-wide transition-colors ${
+                locale === "en"
+                  ? "bg-[var(--accent)] text-white"
+                  : "text-[var(--text-muted)] hover:text-white"
+              }`}
+            >
+              EN
+            </button>
+            <button
+              type="button"
+              onClick={() => setLocale("th")}
+              aria-pressed={locale === "th"}
+              className={`rounded px-2.5 py-1 text-xs font-semibold tracking-wide transition-colors ${
+                locale === "th"
+                  ? "bg-[var(--accent)] text-white"
+                  : "text-[var(--text-muted)] hover:text-white"
+              }`}
+            >
+              TH
+            </button>
+          </div>
         </nav>
       </div>
     </header>

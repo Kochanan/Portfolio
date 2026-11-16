@@ -16,12 +16,15 @@ export function calculateAge(dateOfBirth: string, today: Date): number {
   return age;
 }
 
-/** Formats DOB for display, e.g. 15 May 2008 */
-export function formatDateOfBirth(dateOfBirth: string): string {
+/** Formats DOB for display, e.g. 15 May 2008 / 15 พฤษภาคม 2008 */
+export function formatDateOfBirth(
+  dateOfBirth: string,
+  locale: "en" | "th" = "en",
+): string {
   const dob = new Date(dateOfBirth);
   if (Number.isNaN(dob.getTime())) return dateOfBirth;
 
-  return dob.toLocaleDateString("en-GB", {
+  return dob.toLocaleDateString(locale === "th" ? "th-TH" : "en-GB", {
     day: "numeric",
     month: "long",
     year: "numeric",
